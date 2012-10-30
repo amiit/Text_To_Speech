@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="text2speech.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:text2speech"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid HorizontalAlignment="Left" Width="1366"  >
+        <Grid.Background>
+            
+            <ImageBrush ImageSource="Assets/bg.jpg"/>
+        </Grid.Background>
+        <Grid Name="gridfull" >
+            <TextBox x:Name="msg_txt" HorizontalAlignment="Left" Margin="353,239,0,0" TextWrapping="Wrap" Text="Enter your text." VerticalAlignment="Top" Width="628" Height="125" FontSize="26.667" Background="Transparent" Foreground="#FF723B3B" FontFamily="Verdana" BorderBrush="#FF403A3A" BorderThickness="5"/>
+        <Button x:Name="button1" Content="Lets Convert and Play"  HorizontalAlignment="Left" Margin="419,387,0,0" VerticalAlignment="Top" Width="498" Height="74" FontSize="40" Click="button1_Click" BorderBrush="#FF5B5B3E" BorderThickness="7,7,7,2" Foreground="#FF421919"/>
+        <ProgressBar x:Name="prog1" HorizontalAlignment="Left" Height="7" Margin="353,364,0,0" VerticalAlignment="Top" Width="628" Foreground="#FF5BE21C" Background="#591F211D" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <MediaElement x:Name="media1" HorizontalAlignment="Left" Height="100" Margin="101,340,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Stop" Name="stp_btn" HorizontalAlignment="Left" Margin="419,490,0,0" VerticalAlignment="Top" Click="Button_Click_1" Width="140" Foreground="#FF403636" BorderBrush="#FF5D3232"/>
+        <ProgressBar x:Name="prog2" HorizontalAlignment="Left" Height="10" Margin="424,462,0,0" VerticalAlignment="Top" Width="489" RenderTransformOrigin="0.5,0.5" Background="#FFE6F5E5" Foreground="#FF54A030">
+        	<ProgressBar.RenderTransform>
+        		<CompositeTransform ScaleY="-1"/>
+        	</ProgressBar.RenderTransform>
+        </ProgressBar>
+        <TextBlock HorizontalAlignment="Left" Height="34" Margin="350,211,0,0" TextWrapping="Wrap" Text="Write your text here" VerticalAlignment="Top" Width="375" FontFamily="Baskerville Old Face" FontSize="24" FontWeight="Bold" Foreground="#FF493F3F"/>
+        <RadioButton Name="en" Content="English"  HorizontalAlignment="Left" Height="34" Margin="374,183,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.466,1.131"/>
+        <RadioButton Name="es" Content="Spanish" HorizontalAlignment="Left" Height="24" Margin="872,189,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.466,1.131"/>
+        <RadioButton Name="fr" Content="French" HorizontalAlignment="Left" Height="29" Margin="561,182,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.466,1.131"/>
+        <RadioButton Name="de" Content="German" HorizontalAlignment="Left" Height="26" Margin="465,183,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.466,1.131"/>
+        <RadioButton Name="it" Content="Italian" HorizontalAlignment="Left" Height="24" Margin="781,188,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.466,1.131"/>
+        <RadioButton Name="ht" Content="Hatian Creole" HorizontalAlignment="Left" Height="29" Margin="651,183,0,0" VerticalAlignment="Top" Width="125" RenderTransformOrigin="0.466,1.131"/>
+
+
+        <TextBlock HorizontalAlignment="Left" Margin="586,155,0,0" TextWrapping="Wrap" Text="Choose  Language" VerticalAlignment="Top" Width="190" Height="28" FontSize="20"/>
+        <Button Content="Pause" x:Name="pause" HorizontalAlignment="Left" Margin="777,490,0,0" VerticalAlignment="Top" Click="Button_Click_2" Width="140" Foreground="#FF403636" BorderBrush="#FF5D3232"/>
+        </Grid>
+        <Grid x:Name="snappedgrid" Background="#FF2E7CEC" HorizontalAlignment="Left" VerticalAlignment="Top" Width="339" >
+            <!--<Grid.Background >
+                <ImageBrush ImageSource="" Stretch="Uniform"/>
+            </Grid.Background>-->
+            <TextBox Name="snap_msg" Text="Enter your text here" Margin="10,291,33,426" />
+            <Button Name="snap_btn" Click="snap_btn_Click_1" Content="Lets Convert" Margin="21,347,0,383" Width="270" />
+            <RadioButton Name="en1" Content="English" HorizontalAlignment="Left" Margin="26,61,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="es1" Content="Spanish" HorizontalAlignment="Left" Margin="26,204,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="fr1" Content="French" HorizontalAlignment="Left" Margin="26,170,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="de1" Content="German" HorizontalAlignment="Left" Margin="26,136,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="it1" Content="Italian" HorizontalAlignment="Left" Margin="26,99,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="ht1" Content="Hatian Creole" HorizontalAlignment="Left" Margin="25,238,0,0" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Height="19" Margin="32,40,0,0" TextWrapping="Wrap" Text="Choose Language" VerticalAlignment="Top" Width="111"/>
+            <ProgressBar Name="snap_prog1" HorizontalAlignment="Left" Height="8" Margin="17,402,0,0" VerticalAlignment="Top" Width="289"/>
+
+        </Grid>
+
+    </Grid>
+    
+</Page>
